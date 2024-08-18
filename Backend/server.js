@@ -24,4 +24,5 @@ app.listen(process.env.PORT || 3000,(error)=>{
         console.log("server is on : ",process.env.PORT)
 })
 
-app.use(UserRouter)
+// app.use(UserRouter)
+app.use('/api', UserRouter)
