@@ -7,7 +7,7 @@ dotenv.config()
 const UserRouter=require('./UserRoute')
 const cors=require('cors')
 
-//..............................
+//..............................extra
 mongoose.connect((process.env.URI)).then(()=>{
     console.log("connected to Database successfully")
 }).catch((error)=>{
