@@ -42,7 +42,6 @@ This project is a full-stack web application built using the MERN stack (MongoDB
 - **MongoDB** (local or cloud instance)
 
 ## Installation
-
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Programmerworld55/MERN-Application.git
@@ -53,27 +52,28 @@ This project is a full-stack web application built using the MERN stack (MongoDB
    cd Backend
    npm install
    
-3 **Install frontend dependencies:**
+3. **Install frontend dependencies:**
    ```bash
    cd ../Frontend/vite-project
    npm install
 
-#Usage
-1.**Run the backend server:**
-```bash
-cd Backend
-npm run dev
+## Usage
+1. **Run the backend server:**
+   ```bash
+   cd Backend
+   npm run dev
 
-2 **Run the frontend:**
-```bash
-cd ../Frontend/vite-project
-npm start
 
+2. **Run the frontend:**
+   ```bash
+   cd ../Frontend/vite-project
+   npm start
+   
 ## Access the application:
-Open your browser and go to http://localhost:3000
+  Open your browser and go to http://localhost:3000
 
 ## Contributing
-Feel free to submit issues or pull requests if you find any bugs or want to add features.
+  Feel free to submit issues or pull requests if you find any bugs or want to add features.
 
 
 
