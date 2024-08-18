@@ -1,7 +1,7 @@
 # MERN Stack CRUD Application
 
 ## Description
-This project is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js). It demonstrates CRUD (Create, Read, Update, Delete) operations with data stored in a MongoDB database, showcasing the integration of modern web technologies.
+This project is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js). It demonstrates CRUD (Create, Read, Update, Delete) operations with data stored in a MongoDB database, showcasing the integration of modern web technologies. The backend is implemented in Node.js with Express, and the frontend is built using React with Vite for fast builds.
 
 ## Features
 - **Create**: Add new entries to the database.
@@ -15,6 +15,24 @@ This project is a full-stack web application built using the MERN stack (MongoDB
 - **Express.js**: Backend framework for building the API.
 - **React.js**: Frontend library for building the user interface.
 - **Node.js**: Runtime environment for executing server-side code.
+- **Vite**: Build tool for fast frontend development.
+
+## Folder Structure
+├── Backend/ # Backend-related files
+│ ├── node_modules/
+│ ├── config/
+│ ├── models/
+│ ├── routes/
+│ ├── server.jsx # Main backend server file
+│ └── package.json
+├── Frontend/ # Frontend-related files
+│ ├── vite-project/
+│ │ ├── node_modules/
+│ │ ├── public/
+│ │ ├── src/
+│ │ └── package.json
+└── README.md
+
 
 ## Prerequisites
 - **Node.js** (v14.x or higher)
@@ -25,9 +43,37 @@ This project is a full-stack web application built using the MERN stack (MongoDB
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/repo-name.git
-   cd repo-name
-
-
-
+   git clone https://github.com/Programmerworld55/MERN-Application.git
+   cd MERN-Application
    
+2. **Install backend dependencies:**
+   ```bash
+   cd Backend
+   npm install
+   
+3 **Install frontend dependencies:**
+   ```bash
+   cd ../Frontend/vite-project
+   npm install
+
+#Usage
+# Run the backend server
+cd Backend
+npm run dev
+
+# Run the frontend
+cd ../Frontend/vite-project
+npm start
+
+## Access the application:
+Open your browser and go to http://localhost:3000
+
+## Contributing
+Feel free to submit issues or pull requests if you find any bugs or want to add features.
+
+
+
+
+
+
+
