@@ -19,7 +19,7 @@ app.use(cors());
 
 
 // ...................................
-app.listen(process.env.PORT,(error)=>{
+app.listen(process.env.PORT || 3000,(error)=>{
     if(error) console.log("error occur while starting server : ",error)
         console.log("server is on : ",process.env.PORT)
 })
