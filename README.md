@@ -25,6 +25,8 @@ This project is a full-stack web application built using the MERN stack (MongoDB
 │ ├── routes/
 │ ├── server.jsx # Main backend server file
 │ └── package.json
+
+
 ├── Frontend/ # Frontend-related files
 │ ├── vite-project/
 │ │ ├── node_modules/
@@ -57,11 +59,13 @@ This project is a full-stack web application built using the MERN stack (MongoDB
    npm install
 
 #Usage
-# Run the backend server
+1.**Run the backend server:**
+```bash
 cd Backend
 npm run dev
 
-# Run the frontend
+2 **Run the frontend:**
+```bash
 cd ../Frontend/vite-project
 npm start
 
