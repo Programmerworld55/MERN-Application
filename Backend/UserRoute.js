@@ -7,21 +7,23 @@ const router=express.Router()
 
 // const app=express()
 
-router.get('/', async (req, res)=>
-    {
-        // res.send("Hello World")
-try
-   {
-    const UserStoredData=await UserModel.find()
-    res.status(200).json(UserStoredData)
+router.get('/', async (req, res) => {
+    try {
+        const UserStoredData = await UserModel.find();
 
-   }
-   catch(error){
-    console.log("error occur while reading data from database")
-    res.status(500).json({error:error.message})
-   }
+        // Check if users were fetched successfully
+        if (UserStoredData.length > 0) {
+            res.status(200).send("Users fetched successfully!");
+        } else {
+            res.status(200).send("No users found.");
+        }
 
-})
+    } catch (error) {
+        console.log("Error occurred while reading data from database");
+        res.status(500).send("An error occurred while fetching users.");
+    }
+});
+
 
 // ...............................
 router.post("/",async (req,res)=>{
