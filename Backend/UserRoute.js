@@ -9,18 +9,20 @@ const router=express.Router()
 
 router.get('/', async (req, res) => {
     try {
+        // Fetch user data from the database
         const UserStoredData = await UserModel.find();
-
-        // Check if users were fetched successfully
-        if (UserStoredData.length > 0) {
-            res.status(200).send("Users fetched successfully!");
-        } else {
-            res.status(200).send("No users found.");
-        }
-
+        
+        // Send a custom message along with the user data
+        res.status(200).json({
+            message: "Hello World",
+            data: UserStoredData
+        });
     } catch (error) {
-        console.log("Error occurred while reading data from database");
-        res.status(500).send("An error occurred while fetching users.");
+        console.log("Error occurred while reading data from the database:", error);
+        res.status(500).json({
+            message: "Error occurred while reading data from the database",
+            error: error.message
+        });
     }
 });
 
