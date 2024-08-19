@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "frontend/vite-project/package.json", "use": "@vercel/static-build", "config": { "distDir": "frontend/vite-project/dist" } }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/frontend/vite-project/$1" }
+    ]
+  }
+  
