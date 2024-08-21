@@ -19,7 +19,7 @@ function EditPostForm({ post, onClose, onUpdate }) {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5500/${post._id}`, {
+      const response = await fetch(`http://localhost:5500/api/${post._id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

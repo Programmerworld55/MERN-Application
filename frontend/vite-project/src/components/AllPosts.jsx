@@ -10,12 +10,13 @@ function AllPosts() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await fetch('http://localhost:5500/');
+        const response = await fetch('http://localhost:5500/api'); // Ensure this endpoint matches the backend route
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setPosts(data);
+        // Adjust to access data correctly
+        setPosts(data.data); // Assuming your backend returns data in { message: "...", data: [...] }
       } catch (error) {
         setError(error.message);
       } finally {
@@ -25,10 +26,9 @@ function AllPosts() {
 
     fetchPosts();
   }, []);
-
   async function handleDelete(id) {
     try {
-      const response = await fetch(`http://localhost:5500/${id}`, {
+      const response = await fetch(`http://localhost:5500/api/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

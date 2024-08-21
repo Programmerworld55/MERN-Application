@@ -26,7 +26,7 @@ function CreatePost() {
   async function HandleSubmit(e) {
     e.preventDefault();
 
-    const apiUrl = "http://localhost:5500/"; // Replace with your backend API URL
+    const apiUrl = "http://localhost:5500/api"; // Replace with your backend API URL
 
     try {
       const response = await fetch(apiUrl, {
